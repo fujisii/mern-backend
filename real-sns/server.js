@@ -4,6 +4,12 @@ const userRoute = require("./routes/users");
 const authRoute = require("./routes/auth");
 const postRoute = require("./routes/posts");
 const PORT = 3000;
+const mongoose = require("mongoose");
+const config = require("./config");
+
+// データベース接続
+console.log(config.databaseUri);
+// mongoose.connect(config.databaseUri);
 
 // ミドルウェア
 app.use("/api/users", userRoute);
