@@ -18,7 +18,7 @@ mongoose
 });
 
 // ミドルウェア
-app.use(express.json());
+app.use(express.json());  // json形式でデータを取り扱う
 app.use("/api/users", userRoute);
 app.use("/api/auth", authRoute);
 app.use("/api/posts", postRoute);
@@ -31,4 +31,5 @@ app.get("/", (req, res) => {
 //   res.send("users express");
 // });
 
+// サーバー起動
 app.listen(PORT, () => console.log("サーバーが起動しました"));
